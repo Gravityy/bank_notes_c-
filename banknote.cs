@@ -15,52 +15,50 @@ namespace bank_notes
 		{
 			int bank100=0, bank50=0, bank20=0, bank10=0, bank5=0, bank1=0;
 
-			while(money%100>=0)
+			while(money>=100)
 			{
 				bank100 += 1;
-				money = money % 100;
+				money = money - 100;
 			}
 
-			while(money%50>=0)
+			while(money>=50)
 			{
 				bank50 += 1;
-				money = money % 50;
+				money = money - 50;
 			}
 
-			while(money%20>=0)
+			while(money>=20)
 			{
 				bank20 += 1;
-				money = money % 20;
+				money = money - 20;
 			}
 
-			while(money%10>=0)
+			while(money>=10)
 			{
 				bank10 += 1;
-				money = money % 10;
+				money = money - 10;
 			}
 
-			while(money%5>=0)
+			while(money>=5)
 			{
 				bank5 += 1;
-				money = money % 5;
+				money = money - 5;
 			}
 
-			while(money%1>0)
+			while(money>=1)
 			{
 				bank1 += 1;
-				money = money % 1;
+				money = money - 1;
 			}
 
 			Console.WriteLine(bank100 + " Note(s) of 100.00$");
 			Console.WriteLine(bank50 + " Note(s) of 50.00$");
 			Console.WriteLine(bank20 + " Note(s) of 20.00$");
 			Console.WriteLine(bank10 + " Note(s) of 10.00$");
+			Console.WriteLine(bank5 + " Note(s) of 5.00$");
 			Console.WriteLine(bank1 + " Note(s) of 1.00$");
 		
 			return 0;
 		}
-	
-	
-	
 	}
 }
